@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="./styles/style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <title>Boosting</title>
+  </head>
+
+  <body>
+    <div class="nav-contaienr">
+      <nav>
+          <h1>Boosting.com</h1>
+          <ul class="nav-links ">
+           <li><a href="#about" class="list-hover">About us</a></li>
+           <li><a href="#prices" class="list-hover">Prices</a></li>
+           <li><a href="#reviews" class="list-hover">Reviews</a></li>
+           <li><a href="#results" class="list-hover">Results</a></li>
+           <li><a href="#faq" class="list-hover">FAQ</a></li>
+           <li><a href="#contact" class="list-hover">Contact</a></li>
+          </ul>
+      </nav>
+    </div>
+      <section class="home">
+        <div class="img-container"></div>
+        <div class="inner-container">
+          <h2>boosting</h2>
+          <h1>League of Legends</h1>
+        </div>
+        <button id="home-btn">Learn More</button>
+      </section>
+      <section class="about">
+        <div class="about-content">
+          <h2>About us</h2>
+          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+             standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make 
+             a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, 
+             remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing 
+             Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions 
+             of Lorem Ipsum.</p>
+          <button id="about-btn">Check Prices</button>
+        </div>
+      </section>
+      <section class="prices">
+        <h2>Boosting</h2>
+        <div class="prices-content">
+          <div class="column">
+            <div class="rank-heading">
+              <button id="prices-btn">1</button>
+              <h3>your current rank</h3>
+            </div>
+            <div class="rank-select">
+              <img id="imageToSwap" class="select-image" src="../images/silver.png">
+                <div class="select">
+                  <div class="current-rank-select">
+                      <select onchange="$('#imageToSwap').attr('src', this.options[this.selectedIndex].value);">
+                        <option value="../images/iron.png">Iron</option>
+                        <option value="../images/bronze.png">Bronze</option>
+                        <option value="../images/silver.png"selected>Silver</option>
+                        <option value="../images/gold.png">Gold</option>
+                        <option value="../images/platinum.png">Platinum</option>
+                        <option value="../images/diamond.png">Diamond</option>
+                      </select>
+                  </div>
+                  <div class="current-div-select">
+                    <select>
+                      <option selected>Division I</option>
+                      <option >Division II</option>
+                      <option >Division III</option>
+                      <option >Division IV</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="server">
+                <div class="server-heading">
+                  <button id="server-btn">3</button>
+                  <h3>your server</h3>
+                </div>
+                  <select>
+                    <option>North America</option>
+                    <option selected>EU-West</option>
+                    <option>EU-Nordic&East</option>
+                    <option>Turkey</option>
+                    <option>Russia</option>
+                    <option>Brazil</option>
+                    <option>Latin America North</option>
+                    <option>Latin America South</option>
+                    <option>Oceania</option>
+                    <option>Korea</option>
+                    <option>Japan</option>
+                    <option>PBE</option>
+                    <option>South East Asia</option>
+                  </select>
+              </div>
+          </div>
+          <div class="column">
+            <div class="rank-heading">
+              <button id="prices-btn">2</button>
+              <h3>your desired rank</h3>
+            </div>
+            <div class="rank-select">
+              <img id="imageToSwap" class="select-image" src="../images/gold.png">
+              <div class="select">
+                <div class="desired-rank-select">
+                    <select onchange="$('#imageToSwap').attr('src', this.options[this.selectedIndex].value);">
+                      <option value="../images/iron.png">Iron</option>
+                      <option value="../images/bronze.png">Bronze</option>
+                      <option value="../images/silver.png">Silver</option>
+                      <option value="../images/gold.png" selected>Gold</option>
+                      <option value="../images/platinum.png">Platinum</option>
+                      <option value="../images/diamond.png">Diamond</option>
+                    </select>
+                </div>
+                <div class="desired-div-select">
+                  <select>
+                    <option selected>Division I</option>
+                    <option >Division II</option>
+                    <option >Division III</option>
+                    <option >Division IV</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+  </body>
+</html>
