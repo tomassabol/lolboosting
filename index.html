@@ -4,7 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="stylesheet" href="./styles/style.css" />
+    <link rel="stylesheet" href="./styles/style.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <title>Boosting</title>
   </head>
@@ -18,32 +19,65 @@
            <li><a href="#prices" class="list-hover">Prices</a></li>
            <li><a href="#reviews" class="list-hover">Reviews</a></li>
            <li><a href="#results" class="list-hover">Results</a></li>
-           <li><a href="#faq" class="list-hover">FAQ</a></li>
+           <li><a href="#FAQ" class="list-hover">FAQ</a></li>
            <li><a href="#contact" class="list-hover">Contact</a></li>
+           <li><a href="https://discord.com/new"><img src="../images/discord.png"></a></li>
           </ul>
       </nav>
     </div>
+
       <section class="home">
         <div class="img-container"></div>
         <div class="inner-container">
           <h2>boosting</h2>
           <h1>League of Legends</h1>
         </div>
-        <button id="home-btn">Learn More</button>
+        <button id="home-btn" onclick="location.href='#about'">Learn More</button>
       </section>
-      <section class="about">
-        <div class="about-content">
-          <h2>About us</h2>
-          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
-             standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make 
-             a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, 
-             remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing 
-             Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions 
-             of Lorem Ipsum.</p>
-          <button id="about-btn">Check Prices</button>
+
+      <section class="advantages" id="advantages">
+        <div class="advantages-container">
+          <div class="about-card">
+            <i class="fas fa-trophy"></i>
+              <div class="card-content">
+                <h3>Win ratio</h3>
+                <span>90% overall win ratio</span>
+              </div>
+          </div>
+
+          <div class="about-card">
+            <i class="fas fa-users"></i>
+              <div class="card-content">
+                <h3>Active Boosters</h3>
+                <span>Boosters ready to play</span>
+              </div>
+          </div>
+
+          <div class="about-card">
+            <i class="far fa-list-alt"></i>
+              <div class="card-content">
+                <h3>Your Choice</h3>
+                <span>Your champs preferences</span>
+              </div>
+          </div>
         </div>
       </section>
-      <section class="prices">
+
+      <section class="about" id="about">
+        <img src="https://cdn.ggboost.com/images/renders/home_section_1_render.png">
+          <div class="about-content">
+            <h2>About us</h2>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+              standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make 
+              a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, 
+              remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing 
+              Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions 
+              of Lorem Ipsum.</p>
+            <button id="about-btn" onclick="location.href='#prices'">Check Prices</button>
+          </div>
+      </section>
+     
+      <section class="prices" id="prices">
         <h2>Boosting</h2>
         <div class="prices-content">
           <div class="column">
@@ -55,13 +89,13 @@
               <img id="imageToSwap" class="select-image" src="../images/silver.png">
                 <div class="select">
                   <div class="current-rank-select">
-                      <select onchange="$('#imageToSwap').attr('src', this.options[this.selectedIndex].value);">
-                        <option value="../images/iron.png">Iron</option>
-                        <option value="../images/bronze.png">Bronze</option>
-                        <option value="../images/silver.png"selected>Silver</option>
-                        <option value="../images/gold.png">Gold</option>
-                        <option value="../images/platinum.png">Platinum</option>
-                        <option value="../images/diamond.png">Diamond</option>
+                      <select onchange="$('#imageToSwap').attr('src', this.options[this.selectedIndex].id);">
+                        <option id="../images/iron.png">Iron</option>
+                        <option id="../images/bronze.png">Bronze</option>
+                        <option id="../images/silver.png"selected>Silver</option>
+                        <option id="../images/gold.png">Gold</option>
+                        <option id="../images/platinum.png">Platinum</option>
+                        <option id="../images/diamond.png">Diamond</option>
                       </select>
                   </div>
                   <div class="current-div-select">
@@ -102,16 +136,16 @@
               <h3>your desired rank</h3>
             </div>
             <div class="rank-select">
-              <img id="imageToSwap" class="select-image" src="../images/gold.png">
+              <img id="imageToSwap-desired" class="select-image" src="../images/gold.png">
               <div class="select">
                 <div class="desired-rank-select">
-                    <select onchange="$('#imageToSwap').attr('src', this.options[this.selectedIndex].value);">
-                      <option value="../images/iron.png">Iron</option>
-                      <option value="../images/bronze.png">Bronze</option>
-                      <option value="../images/silver.png">Silver</option>
-                      <option value="../images/gold.png" selected>Gold</option>
-                      <option value="../images/platinum.png">Platinum</option>
-                      <option value="../images/diamond.png">Diamond</option>
+                    <select onchange="$('#imageToSwap-desired').attr('src', this.options[this.selectedIndex].id);">
+                      <option id="../images/iron.png">Iron</option>
+                      <option id="../images/bronze.png">Bronze</option>
+                      <option id="../images/silver.png">Silver</option>
+                      <option id="../images/gold.png" selected>Gold</option>
+                      <option id="../images/platinum.png">Platinum</option>
+                      <option id="../images/diamond.png">Diamond</option>
                     </select>
                 </div>
                 <div class="desired-div-select">
@@ -127,5 +161,100 @@
           </div>
         </div>
       </section>
+      
+      <section class="review" id="reviews">
+        <h2>Reviews</h2>
+
+        <div class="review-container">
+          
+          <div class="review-column">
+            <div class="card">
+              <h3>Great experience</h3>
+              <p>@Mastislav</p>
+                <div class="review-boost">
+                  <img src="../images/silver.png">
+                  <a>→</a>
+                  <img src="../images/gold.png">
+                </div>
+            </div>
+          </div>
+
+          <div class="review-column">
+            <div class="card">
+              <h3>Very nice</h3>
+              <p>@Woraldks</p>
+                <div class="review-boost">
+                  <img src="../images/gold.png">
+                  <a>→</a>
+                  <img src="../images/platinum.png">
+                </div>
+            </div>
+          </div>
+
+          <div class="review-column">
+            <div class="card">
+              <h3>It was great</h3>
+              <p>@Selkyy</p>
+                <div class="review-boost">
+                  <img src="../images/bronze.png">
+                  <a>→</a>
+                  <img src="../images/diamond.png">
+                </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="results" id="results">
+        <h2>Results</h2>
+        
+        <div class="container">
+          <div class="container-card">
+            <img src="https://boosteria.org/img/portfolio/1590628135477.png">
+            <div class="card__head">Silver 3 to Gold 4</div>
+          </div>
+          <div class="container-card">
+            <img src="https://boosteria.org/img/portfolio/1591710453283.jpg">
+            <div class="card__head">Platinum 1 to Diamond 3</div>
+          </div>
+          <div class="container-card">
+            <img src="https://boosteria.org/img/portfolio/1591319291233.png">
+            <div class="card__head">Gold 1 to Platinum 4</div>
+          </div>
+          <div class="container-card">
+            <img src="https://boosteria.org/img/portfolio/1589757823728.jpg">
+            <div class="card__head">Diamond 1 to Master 1</div>
+          </div>
+          <div class="container-card">
+            <img src="https://boosteria.org/img/portfolio/1588819633775.png">
+            <div class="card__head">Bronze 3 to Silver 3</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="FAQ" id="FAQ">
+        <div class="faq-content">
+          <div class="FAQ-container">
+            <h1>Got any questions?</h1>
+            <p>Our Customer Support is ready to answer any of your questions regarding our services!</p>
+
+          <button class="faq-btn">Frequently Asked Questions</button>
+          <button class="contact-btn">Contact us</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="contact" id="contact">
+        <footer>
+          <div class="footer-left">
+            <h1>Boosting.com</h1>
+            <p>League of Legends is a registered trademark of Riot Games, Inc. We are in no way affiliated with, associated with or endorsed by Riot Games, Inc.</p>
+            <h4 class="info">© Boosting.com, website by Tomáš Sabol | All Rights Reserved</h4>
+            <img src="../images/payment-methods.jpg">
+          </div>
+
+        </footer>
+      </section>
+
   </body>
 </html>
